@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro e Upload de Conteúdos Educacionais - BNCC</title>
+    <style>
+        /* Estilos para cores primárias */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-section {
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        /* Cores primárias */
+        .user-form {
+            background-color: #ffeb3b; /* Amarelo */
+        }
+        .upload-section {
+            background-color: #2196f3; /* Azul */
+            color: #fff;
+        }
+        .category-section {
+            background-color: #f44336; /* Vermelho */
+            color: #fff;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="email"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="url"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .checkbox-group label {
+            width: 50%;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Cadastro de Conteúdos Educacionais - BNCC</h2>
+
+        <!-- Seção de Cadastro do Usuário -->
+        <div class="form-section user-form">
+            <h3>Cadastro de Usuário</h3>
+            <form id="userForm">
+                <label for="userName">Nome:</label>
+                <input type="text" id="userName" placeholder="Digite seu nome" required>
+
+                <label for="userEmail">Email:</label>
+                <input type="email" id="userEmail" placeholder="Digite seu email" required>
+            </form>
+        </div>
+
+        <!-- Seção de Upload de Arquivos e Links -->
+        <div class="form-section upload-section">
+            <h3>Upload de Conteúdos Educacionais (BNCC)</h3>
+            <form id="uploadForm">
+                <!-- Upload de arquivos -->
+                <label for="fileUpload">Escolha arquivos educacionais (PDF, DOC, PPT):</label>
+                <input type="file" id="fileUpload" multiple accept=".pdf,.doc,.docx,.ppt,.pptx">
+
+                <!-- Upload de links -->
+                <label for="linkUpload">Insira o link de conteúdo (YouTube, etc.):</label>
+                <input type="url" id="linkUpload" placeholder="Insira o link do conteúdo">
+            </form>
+        </div>
+
+        <!-- Seção de Categorias -->
+        <div class="form-section category-section">
+            <h3>Categorizar Conteúdo</h3>
+            <form id="categoryForm">
+                <p>Escolha as categorias relacionadas:</p>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="category" value="Português"> Português</label>
+                    <label><input type="checkbox" name="category" value="Inglês"> Inglês</label>
+                    <label><input type="checkbox" name="category" value="Matemática"> Matemática</label>
+                    <label><input type="checkbox" name="category" value="Química"> Química</label>
+                    <label><input type="checkbox" name="category" value="Física"> Física</label>
+                    <label><input type="checkbox" name="category" value="História"> História</label>
+                    <label><input type="checkbox" name="category" value="Filosofia"> Filosofia</label>
+                    <label><input type="checkbox" name="category" value="Geografia"> Geografia</label>
+                </div>
+            </form>
+        </div>
+
+        <!-- Botão de Enviar -->
+        <button type="submit" form="uploadForm">Enviar Conteúdo</button>
+
+    </div>
+
+</body>
+</html>
